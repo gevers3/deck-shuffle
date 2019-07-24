@@ -4,7 +4,7 @@ const playingCards = [
   { name: 'Ace', suit: 'hearts', value: 1, path: '<img src="./images/ace-of-hearts.svg" alt="ace-of-hearts" width="280">' },
   { name: 'Two', suit: 'hearts', value: 2, path: '<img src="./images/2-of-hearts.svg" alt="2-of-hearts" width="280">' },
   { name: 'Three', suit: 'hearts', value: 3, path: '<img src="./images/3-of-hearts.svg" alt="3-of-hearts" width="280">' },
-  { name: 'Four', suit: 'hearts', value: 4, path: '<img src="./images/4-of-hearts.svg" alt="4-of-hearts" width="280"> ' },
+  { name: 'Four', suit: 'hearts', value: 4, path: '<img src="./images/4-of-hearts.svg" alt="4-of-hearts" width="280">' },
   { name: 'Five', suit: 'hearts', value: 5, path: '<img src="./images/5-of-hearts.svg" alt="5-of-hearts" width="280">' },
   { name: 'Six', suit: 'hearts', value: 6, path: '<img src="./images/6-of-hearts.svg" alt="6-of-hearts" width="280">' },
   { name: 'Seven', suit: 'hearts', value: 7, path: '<img src="./images/7-of-hearts.svg" alt="7-of-hearts" width="280">' },
@@ -92,43 +92,66 @@ const shuffleDeck = () => {
   }
 }
 
+
 const printFiveRandomCards = () => {
   // print out the first 5 cards
-  for (let i = 0; i < 5; i++) {
-    // console.log(Deck[i].path)
-    // add the new img path to the DOM - was .textContent, but Liz fixed by changing to .innerHTML
-    document.querySelector('.card-01').innerHTML = Deck[0].path
-    document.querySelector('.card-02').innerHTML = Deck[1].path
-    document.querySelector('.card-03').innerHTML = Deck[2].path
-    document.querySelector('.card-04').innerHTML = Deck[3].path
-    document.querySelector('.card-05').innerHTML = Deck[4].path
+  for (let i = 0; i < 1; i++) {
+    // create a new p tag
+    // update the content of the new p tag
+    const cardPics = document.createElement('img');
+    img.src = Deck[i].path;
+    document.getElementById('card-01').appendChild(cardPics);
+
+    // add the new p to the DOM
+    // document.querySelector('.card-01').textContent = Deck[i].path
   }
 }
 
-// const printTwoRandomCard = () => {
+
+// const printFiveRandomCards = () => {
 //   // print out the first 5 cards
-//   for (let q = 0; q < 1; q++) {
+//   for (let i = 0; i < 5; i++) {
 //     // create a new p tag
+//     const newElement = document.createElement('p')
 //     // update the content of the new p tag
+//     newElement.textContent = `${Deck[i].name} of ${Deck[i].suit}`
+//     // add the new p to the DOM
+//     document.querySelector('.card-01').appendChild(newElement)
+//   }
+// }
+
+
+// const printFiveRandomCards = () => {
+//   // print out the first 5 cards
+//   for (let i = 0; i < 5; i++) {
+//     const cardCheck = 
+//     if (Deck[i].name.includes('Ace') && Deck[i].suit.inclues('clubs')) {
+//       // Found world
+//       // create a new p tag
+//       const newElement = document.createElement('<img src="./images/3-of-diamonds.svg" alt="3-of-diamonds" width="280">')
+//       // update the content of the new p tag
+//       newElement.textContent = `${Deck[i].name} of ${Deck[i].suit}`
+//       // check to see if card contains a specific name and suit
+//     }
 
 //     // add the new p to the DOM
-//     document.querySelector('.card-02').innerHTML = Deck[q].path
+//     document.querySelector('.card-01').appendChild(newElement)
 //   }
+// }
+
+// const changeColor1 = () => {
+//   document.querySelector('.card-01 p').style.background = 'red'
 // }
 
 document
   .querySelector('.card-back-click')
   .addEventListener('click', printFiveRandomCards)
 
-// document
-//   .querySelector('.card-back-click')
-//   .addEventListener('click', printTwoRandomCard)
-
 
 const main = () => {
   createDeck()
   shuffleDeck()
-  // printOneRandomCard()
+  printFiveRandomCards()
 }
 
 

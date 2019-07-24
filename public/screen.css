@@ -1,12 +1,138 @@
 :root {
   font: 16px / 1 sans-serif;
 }
-
 html {
   height: 100%;
 }
-
+* {
+  box-sizing: border-box;
+}
 body {
+  background-color: #009345;
   margin: 0;
   min-height: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+.container-logo-and-dealer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-top: 2%;
+}
+.container-logo-and-dealer .card-base:first-child {
+  width: 40%;
+}
+.container-logo-and-dealer .card-base:last-child {
+  width: 40%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.container-logo-and-dealer .card-base:first-child img {
+  width: 70%;
+}
+.container-logo-and-dealer h1 {
+  margin-top: 8%;
+  margin-bottom: 0;
+  padding-left: 10%;
+  width:100%;
+  font-size: 2.3rem;
+}
+.container-logo-and-dealer p {
+  margin-top: 0;
+  padding-left: 10%;
+  width: 60%;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+.card-base {
+  width: 20%;
+  margin: 2% 0%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.card-base img {
+  max-width: 85%;
+  height: auto; 
+}
+.cards-face-up {
+  display: flex;
+  flex-flow: row nowrap;
+ }
+.card-base:first-child {
+   margin-left: 5%;
+ }
+.card-base:last-child {
+  margin-right: 5%;
+}
+@media (max-width: 1200px) { 
+.container-logo-and-dealer h1 {
+  margin-top: 8%;
+  margin-bottom: 0;
+  padding-left: 10%;
+  width:100%;
+  font-size: 1.9rem;
+  }
+.container-logo-and-dealer p {
+  margin-top: 0;
+  padding-left: 10%;
+  width: 60%;
+  font-size: 1rem;
+  line-height: 1.5;
+  }
+@media (max-width: 768px) { 
+.container-logo-and-dealer h1 {
+  font-size: 1.5rem;
+  }
+.container-logo-and-dealer p {
+  font-size: .8rem;
+  }
+@media (max-width: 600px) { 
+  .container-logo-and-dealer .card-base:first-child {
+    width: 85%;
+    margin: 0;
+  }
+  .container-logo-and-dealer {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 0%;
+  }
+  .container-logo-and-dealer .card-base {
+    width: 40%;
+  }
+  .container-logo-and-dealer .card-base img {
+    width: 100%;
+  }
+  .container-logo-and-dealer h1 {
+    margin-top: 4%;
+  }  
+  .container-logo-and-dealer p {
+    margin-top: 0;
+    padding-left: 10%;
+    width: 85%;
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+  .cards-face-up {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 5%;
+   }
+  .card-base {
+    width: 40%;
+    margin: 2% 0%;
+  }
+  .container-logo-and-dealer .card-base:last-child {
+    width: 100%;
+  }
+  .card-base:first-child {
+    margin-left: 0%;
+  }
+ .card-base:last-child {
+   margin-right: 0%;
+ }
 }
